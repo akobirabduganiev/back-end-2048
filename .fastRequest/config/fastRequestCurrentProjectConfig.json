@@ -1,11 +1,25 @@
 {
-	"dataList":[],
-	"envList":[],
+	"dataList":[
+		{
+			"hostGroup":[
+				{
+					"env":"local",
+					"url":"http://localhost:8080"
+				}
+			],
+			"name":"back-end-2048"
+		}
+	],
+	"envList":[
+		"local"
+	],
 	"headerList":[],
 	"maxDescriptionLength":-1,
 	"postScript":"",
 	"preScript":"",
-	"projectList":[],
+	"projectList":[
+		"back-end-2048"
+	],
 	"syncModel":{
 		"branch":"master",
 		"domain":"https://github.com",
