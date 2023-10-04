@@ -35,8 +35,8 @@ public class SwaggerConfig {
     public OpenAPI springOpenApi(){
         return new OpenAPI()
                 .info(new Info()
-                        .title("Home Service")
-                        .description("REST API for Home Service website")
+                        .title("Backend 2048")
+                        .description("REST API for 2048 game")
                         .version("1.0.0")
                         .contact(new Contact()
                                 .name("Akobir")
