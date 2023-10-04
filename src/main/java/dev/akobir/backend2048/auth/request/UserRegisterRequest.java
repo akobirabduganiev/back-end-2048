@@ -1,20 +1,25 @@
 package dev.akobir.backend2048.auth.request;
 
-import jakarta.validation.constraints.Min;
+
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 public class UserRegisterRequest {
-    @Min(value = 3, message = "Username must be at least three characters long")
     @NotNull(message = "Username cannot be null")
+    @Size(min = 3, max = 45, message = "The Username must be between 3 and 45 characters long")
     private String username;
-    @NotNull(message = "Name cannot be null")
+    @NotBlank(message = "Name cannot be blank")
+    @Size(min = 3, max = 45, message = "The Name must be between 3 and 45 characters long")
     private String name;
-    @NotNull(message = "Surname cannot be null")
+    @NotBlank(message = "Surname cannot be blank")
+    @Size(min = 3, max = 45, message = "Surname must be between 3 and 45 characters long")
     private String surname;
-    @Min(value = 8, message = "Password must be at least eight characters long")
+    @NotNull(message = "Password cannot be null")
+    @Size(min = 6, max = 45, message = "The Password must be between 6 and 45 characters long")
     private String password;
 }
